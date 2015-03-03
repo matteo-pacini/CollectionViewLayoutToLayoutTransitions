@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7515.2" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7512"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="EuJ-F6-U5W" customClass="CollectionViewCell" customModule="CollectionViewLayoutToLayoutTransitions" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="359" height="450"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="359" height="450"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXc-vt-s9l" userLabel="Content View">
+                        <rect key="frame" x="0.0" y="0.0" width="359" height="450"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="avatarImage" translatesAutoresizingMaskIntoConstraints="NO" id="0Up-46-8T1" userLabel="Avatar Image">
+                                <rect key="frame" x="8" y="8" width="36" height="39"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Doge" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eh9-U5-eNe" userLabel="Avatar Label">
+                                <rect key="frame" x="52" y="8" width="299" height="39"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.23137254901960785" green="0.24705882352941178" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleImage" translatesAutoresizingMaskIntoConstraints="NO" id="rec-Dm-Asn" userLabel="Post Image">
+                                <rect key="frame" x="8" y="55" width="343" height="387"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Eh9-U5-eNe" firstAttribute="height" secondItem="0Up-46-8T1" secondAttribute="height" id="6ci-8n-Xhf"/>
+                            <constraint firstItem="rec-Dm-Asn" firstAttribute="leading" secondItem="fXc-vt-s9l" secondAttribute="leading" constant="8" id="9Dz-P5-gaF"/>
+                            <constraint firstItem="Eh9-U5-eNe" firstAttribute="top" secondItem="fXc-vt-s9l" secondAttribute="top" constant="8" id="9Su-Ia-VFK"/>
+                            <constraint firstItem="0Up-46-8T1" firstAttribute="top" secondItem="fXc-vt-s9l" secondAttribute="top" constant="8" id="E5e-SA-j0v"/>
+                            <constraint firstItem="0Up-46-8T1" firstAttribute="leading" secondItem="fXc-vt-s9l" secondAttribute="leading" constant="8" id="PO9-zR-PoI"/>
+                            <constraint firstItem="0Up-46-8T1" firstAttribute="width" secondItem="fXc-vt-s9l" secondAttribute="width" multiplier="0.1" id="R9C-aH-ZK6"/>
+                            <constraint firstItem="Eh9-U5-eNe" firstAttribute="leading" secondItem="0Up-46-8T1" secondAttribute="trailing" constant="8" id="c6t-is-rQa"/>
+                            <constraint firstItem="0Up-46-8T1" firstAttribute="height" secondItem="fXc-vt-s9l" secondAttribute="width" multiplier="0.11" id="fe3-lQ-evB"/>
+                            <constraint firstAttribute="trailing" secondItem="Eh9-U5-eNe" secondAttribute="trailing" constant="8" id="hp2-Kh-rZf"/>
+                            <constraint firstAttribute="trailing" secondItem="rec-Dm-Asn" secondAttribute="trailing" constant="8" id="jit-m3-Fla"/>
+                            <constraint firstItem="rec-Dm-Asn" firstAttribute="top" secondItem="Eh9-U5-eNe" secondAttribute="bottom" constant="8" id="tLw-Fx-4V2"/>
+                            <constraint firstAttribute="bottom" secondItem="rec-Dm-Asn" secondAttribute="bottom" constant="8" id="vXA-qP-uPE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fXc-vt-s9l" secondAttribute="bottom" id="1wm-sj-HMz"/>
+                <constraint firstItem="fXc-vt-s9l" firstAttribute="top" secondItem="EuJ-F6-U5W" secondAttribute="top" id="gfY-El-ldX"/>
+                <constraint firstAttribute="trailing" secondItem="fXc-vt-s9l" secondAttribute="trailing" id="ghB-49-gK8"/>
+                <constraint firstItem="fXc-vt-s9l" firstAttribute="leading" secondItem="EuJ-F6-U5W" secondAttribute="leading" id="kMc-wa-JPF"/>
+            </constraints>
+            <size key="customSize" width="359" height="450"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="outline">
+                    <color key="value" red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-132.5" y="348"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="avatarImage" width="2000" height="1200"/>
+        <image name="sampleImage" width="640" height="480"/>
+    </resources>
+</document>
