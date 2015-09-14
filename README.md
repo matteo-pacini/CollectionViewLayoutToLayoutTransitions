@@ -6,9 +6,8 @@
 
 ##Implementation Details
 
-The project has been written in Swift 1.2.
-
-It probably won't compile on Xcode 6.1 (which uses Swift 1.1).
+Swift v2.0
+Xcode 7 GM
 
 There's no storyboard, and the only XIB used is to design the collection view cell.
 
