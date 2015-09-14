@@ -22,6 +22,7 @@
 
 import UIKit
 
+
 class ViewController : UICollectionViewController {
 
     //MARK: Properties 
@@ -37,6 +38,11 @@ class ViewController : UICollectionViewController {
         super.viewDidLoad()
         
         self.setup()
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
     }
     
@@ -70,7 +76,7 @@ class ViewController : UICollectionViewController {
         //If we're on the normal layout, we add a bar button item,
         //whose action pushes a copy of this view controller with the expanded
         //layout.
-        if let normalLayout = self.collectionViewLayout as? CollectionViewFlowLayout {
+        if let _ = self.collectionViewLayout as? CollectionViewFlowLayout {
             
             let bbi = UIBarButtonItem(title: "Change Layout",
                 style: UIBarButtonItemStyle.Plain,
