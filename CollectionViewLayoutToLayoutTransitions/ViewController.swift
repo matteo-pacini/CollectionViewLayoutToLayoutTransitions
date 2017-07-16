@@ -28,7 +28,7 @@ class ViewController : UICollectionViewController {
     //MARK: Properties 
     
     //Cell class name, without Swift module
-    private let cellIdentifier =
+    fileprivate let cellIdentifier =
         NSStringFromSwiftClass(CollectionViewCell.self)!
     
     //MARK: UIViewController
@@ -41,12 +41,12 @@ class ViewController : UICollectionViewController {
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
     }
     
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         
         //This is necessary for the layout to honor "itemsPerRow"
         self.collectionViewLayout.invalidateLayout()
@@ -55,7 +55,7 @@ class ViewController : UICollectionViewController {
         
     //MARK: Setup
     
-    private func setup() {
+    fileprivate func setup() {
         
         //Background color (as per screenshot)
         self.collectionView!.backgroundColor =
@@ -68,9 +68,9 @@ class ViewController : UICollectionViewController {
         //Register cell nib
         
         let nib = UINib(nibName: "CollectionViewCell",
-            bundle: NSBundle.mainBundle())
+            bundle: Bundle.main)
         
-        self.collectionView!.registerNib(nib,
+        self.collectionView!.register(nib,
             forCellWithReuseIdentifier: cellIdentifier)
         
         //If we're on the normal layout, we add a bar button item,
@@ -79,11 +79,11 @@ class ViewController : UICollectionViewController {
         if let _ = self.collectionViewLayout as? CollectionViewFlowLayout {
             
             let bbi = UIBarButtonItem(title: "Change Layout",
-                style: UIBarButtonItemStyle.Plain,
+                style: UIBarButtonItemStyle.plain,
                 target: self,
-                action: "changeLayout")
+                action: #selector(ViewController.changeLayout))
             
-            self.navigationItem.setLeftBarButtonItem(bbi, animated: false)
+            self.navigationItem.setLeftBarButton(bbi, animated: false)
             
         }
         
@@ -92,7 +92,7 @@ class ViewController : UICollectionViewController {
     //MARK: UICollectionViewDataSource
     
     override func collectionView(
-        collectionView: UICollectionView,
+        _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int) -> Int {
         
             return 27 //Random
@@ -100,13 +100,13 @@ class ViewController : UICollectionViewController {
     }
     
     override func collectionView(
-        collectionView: UICollectionView,
-        cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
             let cell =
-            collectionView.dequeueReusableCellWithReuseIdentifier(
-                self.cellIdentifier,
-                forIndexPath: indexPath) as! CollectionViewCell
+            collectionView.dequeueReusableCell(
+                withReuseIdentifier: self.cellIdentifier,
+                for: indexPath) as! CollectionViewCell
             
             return cell
             

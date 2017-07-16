@@ -1,13 +1,13 @@
-#Layout-To-Layout Transitions in Swift (1.2)
+# Layout-To-Layout Transitions in Swift (3.x)
 
-##Demonstration
+## Demonstration
 
 ![1.gif](1.gif)
 
 ##Implementation Details
 
-Swift v2.0
-Xcode 7 GM
+Swift v3.x
+Xcode 8.3.x
 
 There's no storyboard, and the only XIB used is to design the collection view cell.
 
@@ -15,7 +15,7 @@ This is the initial view controller hierachy:
 
     - [UINavigationController]
     |-- [ViewController layout:normal]
-    
+
     normal: CollectionViewFlowLayout
 
 When the button "Change Layout" is pressed, the view hierarchy changes to:
@@ -35,7 +35,7 @@ The "expanded" layout enforces 1 item per row, and the item's width is the same 
 
 ##License
 
-    Copyright (c) 2015 Matteo Pacini
+    Copyright (c) 2015-2017 Matteo Pacini
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -43,10 +43,10 @@ The "expanded" layout enforces 1 item per row, and the item's width is the same 
     to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
     copies of the Software, and to permit persons to whom the Software is
     furnished to do so, subject to the following conditions:
-    
+
     The above copyright notice and this permission notice shall be included in
     all copies or substantial portions of the Software.
-    
+
     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
     IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
     FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE

@@ -27,10 +27,10 @@ import UIKit
 //3 items per row on iPads, and just one for iPhones.
 class CollectionViewFlowLayout : UICollectionViewFlowLayout {
     
-    private var itemsPerRow : Int {
+    fileprivate var itemsPerRow : Int {
         get {
-            let idiom = UIDevice.currentDevice().userInterfaceIdiom
-            if (idiom == UIUserInterfaceIdiom.Pad) {
+            let idiom = UIDevice.current.userInterfaceIdiom
+            if (idiom == UIUserInterfaceIdiom.pad) {
                 //3 items on iPads
                 return 3
             } else {
@@ -42,7 +42,7 @@ class CollectionViewFlowLayout : UICollectionViewFlowLayout {
     
     //MARK: UICollectionViewFlowLayout
     
-    override func prepareLayout() {
+    override func prepare() {
         
         self.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20)
         
@@ -73,7 +73,7 @@ class CollectionViewFlowLayout : UICollectionViewFlowLayout {
                 )
         }
         
-        self.itemSize = CGSizeMake(itemWidth, itemWidth * 1.15)
+        self.itemSize = CGSize(width: itemWidth, height: itemWidth * 1.15)
         
     }
     

@@ -23,9 +23,9 @@
 import Foundation
 
 //NSStringFromClass for Swift classes (gets rid of the module).
-public func NSStringFromSwiftClass(aClass: AnyClass) -> String? {
+public func NSStringFromSwiftClass(_ aClass: AnyClass) -> String? {
     
     return NSStringFromClass(aClass)
-        .componentsSeparatedByString(".").last
+        .components(separatedBy: ".").last
     
 }

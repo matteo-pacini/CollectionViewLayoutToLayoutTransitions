@@ -26,18 +26,18 @@ import UIKit
     
     //Voodoo recipe: http://stackoverflow.com/q/20087187/2890168
     //If this is not specified, the cell subviews won't animate properly during the layout transition.
-    override func applyLayoutAttributes(layoutAttributes: UICollectionViewLayoutAttributes?) {
+    override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes?) {
         self.layoutIfNeeded()
     }
     
     //Cell outline colour
     @IBInspectable var outline : UIColor {
         get {
-            return UIColor(CGColor: self.layer.borderColor!)
+            return UIColor(cgColor: self.layer.borderColor!)
         }
         set {
             self.layer.borderWidth = 0.5
-            self.layer.borderColor = outline.CGColor
+            self.layer.borderColor = outline.cgColor
         }
     }
     

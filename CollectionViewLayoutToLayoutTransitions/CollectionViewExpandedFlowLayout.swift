@@ -27,7 +27,7 @@ import UIKit
 //One item per row, and item.width == collectionView.width
 class CollectionViewExpandedFlowLayout : UICollectionViewFlowLayout {
      
-    override func prepareLayout() {
+    override func prepare() {
         
         self.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0)
         
@@ -36,8 +36,8 @@ class CollectionViewExpandedFlowLayout : UICollectionViewFlowLayout {
         
         let itemWidth : CGFloat = collectionViewWidth!
         
-        self.itemSize = CGSizeMake(itemWidth,
-            self.collectionView!.frame.height * 0.80)
+        self.itemSize = CGSize(width: itemWidth,
+            height: self.collectionView!.frame.height * 0.80)
         
     }
     
