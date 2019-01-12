@@ -1,4 +1,4 @@
-# Layout-To-Layout Transitions in Swift (3.x)
+# Layout-To-Layout Transitions in Swift (4.x)
 
 ## Demonstration
 
@@ -6,8 +6,8 @@
 
 ##Implementation Details
 
-Swift v3.x
-Xcode 8.3.x
+Swift v4.2
+Xcode 10.1
 
 There's no storyboard, and the only XIB used is to design the collection view cell.
 
@@ -35,7 +35,7 @@ The "expanded" layout enforces 1 item per row, and the item's width is the same 
 
 ##License
 
-    Copyright (c) 2015-2017 Matteo Pacini
+    Copyright (c) 2015-2019 Matteo Pacini
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
