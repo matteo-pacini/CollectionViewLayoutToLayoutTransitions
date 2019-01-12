@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////////////
-// Copyright (c) 2015 Matteo Pacini                                              //
+// Copyright (c) 2015-2019 Matteo Pacini                                         //
 //                                                                               //
 // Permission is hereby granted, free of charge, to any person obtaining a copy  //
 // of this software and associated documentation files (the "Software"), to deal //
@@ -44,7 +44,7 @@ class CollectionViewFlowLayout : UICollectionViewFlowLayout {
     
     override func prepare() {
         
-        self.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20)
+        self.sectionInset = UIEdgeInsets.init(top: 20, left: 20, bottom: 20, right: 20)
         
         let collectionViewWidth =
             self.collectionView?.bounds.size.width

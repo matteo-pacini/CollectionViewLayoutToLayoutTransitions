@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////////////
-// Copyright (c) 2015 Matteo Pacini                                              //
+// Copyright (c) 2015-2019 Matteo Pacini                                         //
 //                                                                               //
 // Permission is hereby granted, free of charge, to any person obtaining a copy  //
 // of this software and associated documentation files (the "Software"), to deal //
@@ -79,7 +79,7 @@ class ViewController : UICollectionViewController {
         if let _ = self.collectionViewLayout as? CollectionViewFlowLayout {
             
             let bbi = UIBarButtonItem(title: "Change Layout",
-                style: UIBarButtonItemStyle.plain,
+                style: UIBarButtonItem.Style.plain,
                 target: self,
                 action: #selector(ViewController.changeLayout))
             
@@ -114,7 +114,7 @@ class ViewController : UICollectionViewController {
         
     //MARK: Change Layout
     
-    func changeLayout() {
+    @objc func changeLayout() {
         
         let nextVC =
         ViewController(collectionViewLayout : CollectionViewExpandedFlowLayout())

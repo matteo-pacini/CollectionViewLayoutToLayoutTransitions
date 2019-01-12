@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////////////
-// Copyright (c) 2015 Matteo Pacini                                              //
+// Copyright (c) 2015-2019 Matteo Pacini                                         //
 //                                                                               //
 // Permission is hereby granted, free of charge, to any person obtaining a copy  //
 // of this software and associated documentation files (the "Software"), to deal //
@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication,
-        didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
             
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = UIColor.white
