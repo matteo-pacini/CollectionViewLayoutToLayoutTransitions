@@ -4,7 +4,7 @@
 
 ![1.gif](1.gif)
 
-##Implementation Details
+## Implementation Details
 
 Swift v4.2
 Xcode 10.1
@@ -33,7 +33,7 @@ The "normal" layout enforces 3 items per row on iPads, and just one item for iPh
 
 The "expanded" layout enforces 1 item per row, and the item's width is the same of the collection view.
 
-##License
+## License
 
     Copyright (c) 2015-2019 Matteo Pacini
 
