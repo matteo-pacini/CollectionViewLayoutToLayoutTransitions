@@ -37,7 +37,7 @@ import UIKit
         }
         set {
             self.layer.borderWidth = 0.5
-            self.layer.borderColor = outline.cgColor
+            self.layer.borderColor = newValue.cgColor
         }
     }
     
